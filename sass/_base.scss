@@ -9,7 +9,7 @@ $primary-font: 'Roboto', sans-serif;
 // $smooth-trans: all 0.3s ease-in-out;
 
 ///////// BOX SHADOW
-// $shadow-1: 0 10px 4px rgba(0, 0, 0, 0.1);
+$shadow-1: 2px 2px 5px rgba(0, 0, 0, 0.3);
 // $shadow-2: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
 ///////// BREAKPONTS
@@ -55,8 +55,61 @@ body {
   min-height: 100vh;
   max-width: 100vw;
   font-family: $primary-font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @include alignItemCenter();
+  // @include alignItemCenter();
 }
 
 //////////////////////////////////////////
+
+.carousel {
+  box-shadow: $shadow-1;
+  height: 53rem;
+  max-width: 50rem;
+  margin: 2rem;
+
+  overflow: hidden;
+
+  &__container {
+    height: 50rem;
+    width: 100%;
+    display: flex;
+    // transform: translateX(-400%);
+    transition: transform 0.5s ease-in-out;
+
+    &__img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+
+    &__button {
+      width: 49.5%;
+      height: 100%;
+      background-color: #004953;
+      color: #fff;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:active {
+        outline: none;
+      }
+    }
+  }
+}

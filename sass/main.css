@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 53rem;
+  max-width: 50rem;
+  margin: 2rem;
+  overflow: hidden;
+}
+.carousel__container {
+  height: 50rem;
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel__container__img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.carousel__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+}
+.carousel__buttons__button {
+  width: 49.5%;
+  height: 100%;
+  background-color: #004953;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.carousel__buttons__button:hover {
+  opacity: 0.9;
+}
+.carousel__buttons__button:active {
+  outline: none;
+}/*# sourceMappingURL=main.css.map */
